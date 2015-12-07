@@ -41,7 +41,7 @@ namespace Exercício_Final
                     Console.WriteLine("Logado com sucesso!");
                     DateTime lastacess = DateTime.Now;
                     cmd.CommandText = "UPDATE User SET DataUltAces = '@lastacess'";
-                    cmd.Parameters.AddWithValue("@ultimoAcesso", lastacess);
+                    cmd.Parameters.AddWithValue("@lastacess", lastacess);
                     cmd.Connection = conn;
                     cmd.ExecuteNonQuery();
                     Console.WriteLine("Digite 0 para deslogar!");
